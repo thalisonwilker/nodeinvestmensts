@@ -1,345 +1,376 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Node Investiment - Investimento encadeado, lucro multiplicado.</title>
-        
-    </head>
 
-    <body id="home">
-        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
-            
-            <div class="container">
-                <a href="#" class="navbar-brand">Node Investiment</a>
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Node Investiment - Investimento encadeado, lucro multiplicado.</title>
 
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+</head>
+
+<body id="home">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+
+        <div class="container">
+            <a href="#" class="navbar-brand">Node Investiment</a>
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#explore-header-section" class="nav-link">Explore</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#conect" class="nav-link">Conect</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#invista" class="nav-link">Invista</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#atinga-resultados" class="nav-link">Atinga resultados</a>
-                        </li>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#explore-header-section" class="nav-link">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#conect" class="nav-link">Conect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#invista" class="nav-link">Invista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#atinga-resultados" class="nav-link">Atinga resultados</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a href="#cresca" class="nav-link">Cresça</a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="#cresca" class="nav-link">Cresça</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a href="#compartilhe" class="nav-link">Compartilhe</a>
-                        </li>
-                    </ul>                   
-                </div>
+                    <li class="nav-item">
+                        <a href="#compartilhe" class="nav-link">Compartilhe</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- home -->
+    <!-- home -->
 
-        <header id="home-section">
-            <div class="dark-overlay">
-                <div class="home-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 d-none d-lg-block">
-                                <h1 class="diaplay-4 font-wieght-normal">Saiba <strong>quando</strong> e <strong>onde</strong> investir junto dos <strong>melhores</strong>.</h1>
-                             
-                                <div class="d-flex flex-row">
-                                    <div class="p-4 alig-senf-start">
-                                        <i class="fa fa-check"></i>
-                                    </div>
+    <header id="home-section">
+        <div class="dark-overlay">
+            <div class="home-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-lg-block">
+                            <h1 class="diaplay-4 font-wieght-normal">Saiba <strong>quando</strong> e <strong>onde</strong> investir junto dos <strong>melhores</strong>.</h1>
 
-                                    <div class="p-4 alig-senf-end">
-                                        Investimento estratégico, seguro, e confiável. Conheça os melhores negócios em que você pode investir e lucrar muito.
-                                    </div>
+                            <div>
+                                <p>
+                                    <span id="views"></span> pessoas estão assistindo a esse vídeo. Devido à alta demanda de acessos, garantimos a apresentação somente até <span id="final-date"></span>
+                                </p>
+                            </div>
+                            <script>
+                                function randomValue() {
+                                    const min = 980;
+                                    const max = 2500;
+                                    while (true) {
+                                        const value = Math.floor(Math.random() * (max - min + 1)) + min;
+                                        if (value % 2 === 0) {
+                                            return value;
+                                        }
+                                    }
+                                };
+
+                                const views = document.getElementById('views');
+
+                                views.innerText = randomValue();
+                                const dateElement = document.getElementById('final-date');
+
+                                const date = new Date().toLocaleDateString('pt-BR');
+                                dateElement.innerText = date;
+
+                                setInterval(() => {
+                                    views.innerText = randomValue();
+                                }, 2500);
+                            </script>
+
+                            <div class="d-flex flex-row">
+                                <div class="p-4 alig-senf-start">
+                                    <i class="fa fa-check"></i>
                                 </div>
-                                <div class="d-flex flex-row">
-                                    <div class="p-4 alig-senf-start">
-                                        <i class="fa fa-check"></i>
-                                    </div>
 
-                                    <div class="p-4 alig-senf-end">
-                                        Cada nó a rede fica maior. Contanto com mais de 100K de usuários, a Node Investiment é a maior rede de investido do Brasil.
-                                    </div>
+                                <div class="p-4 alig-senf-end">
+                                    Investimento estratégico, seguro, e confiável. Conheça os melhores negócios em que você pode investir e lucrar muito.
                                 </div>
-                                <div class="d-flex flex-row">
-                                    <div class="p-4 alig-senf-start">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-
-                                    <div class="p-4 alig-senf-end">
-                                        Receba dicas e conselhos de que já é experiente no mercado de investimentos.
-                                    </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-4 alig-senf-start">
+                                    <i class="fa fa-check"></i>
                                 </div>
 
+                                <div class="p-4 alig-senf-end">
+                                    Cada nó a rede fica maior. Contanto com mais de 100K de usuários, a Node Investiment é a maior rede de investido do Brasil.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-4 alig-senf-start">
+                                    <i class="fa fa-check"></i>
+                                </div>
+
+                                <div class="p-4 alig-senf-end">
+                                    Receba dicas e conselhos de que já é experiente no mercado de investimentos.
+                                </div>
                             </div>
 
-                            <div class="col-lg-4">
-                                <div class="card bg-primary text-center card-form">
-                                    <div class="card-body">
-                                        <h3>Começe hoje</h3>
-                                        <p>Se inscreva no formulário abaixo para mais informações</p>
-                                        <form action="">
-                                            <div class="form-group">
-                                                <input placeholder="Username" type="text" class="form-control form-control-lg">
-                                            </div>
-                                            <div class="form-group">
-                                                <input placeholder="Email" type="email" class="form-control form-control-lg">
-                                            </div>
-                                            <div class="form-group">
-                                                <input placeholder="Password" type="password" class="form-control form-control-lg">
-                                            </div>
-                                            <div class="form-group">
-                                                <input placeholder="Confirm password" type="password" class="form-control form-control-lg">
-                                            </div>
-                                            <input type="submit" class="btn btn-block btn-primary border border-light">
-                                        </form>
-                                    </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card bg-primary text-center card-form">
+                                <div class="card-body">
+                                    <h3>Começe hoje</h3>
+                                    <p>Se inscreva no formulário abaixo para mais informações</p>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input placeholder="Username" type="text" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="form-group">
+                                            <input placeholder="Email" type="email" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="form-group">
+                                            <input placeholder="Password" type="password" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="form-group">
+                                            <input placeholder="Confirm password" type="password" class="form-control form-control-lg">
+                                        </div>
+                                        <input type="submit" class="btn btn-block btn-primary border border-light">
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- explore header -->
+    <!-- explore header -->
 
-        <section id="explore-header-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="py-5">
-                            <h1 class="display-5">
-                                Explore
-                            </h1>
-                            <p class="lead">
-                                Uma rede de <strong>investidores profissionais</strong> e <strong>profissionais investidores</strong> dispostos a ajudar você a começar no ramo de investimento profissional.
-                            </p>
-                            <a class="btn btn-outline-secondary" href="#">Buscar um negócio</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-            <!-- explore-section -->
-
-        <section id="conect" class="bg-light text-muted py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="image/conect.png" alt="Connect" class="img-fluid mb-3 rounded-circle">
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Conect</h3>
-                        <p>
-                            Começe a <strong>agora</strong> a fazer parte da maior rede de investidores do Brasil.
+    <section id="explore-header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-5">
+                            Explore
+                        </h1>
+                        <p class="lead">
+                            Uma rede de <strong>investidores profissionais</strong> e <strong>profissionais investidores</strong> dispostos a ajudar você a começar no ramo de investimento profissional.
                         </p>
+                        <a class="btn btn-outline-secondary" href="#">Buscar um negócio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- explore-section -->
 
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    O mercado de investimento nunca foi tão fácil. Com a Node Investiment, você fará parte de uma grande rede de idéias de negócios, macetes de investimento e profissionais ligados 24h no mundo dos negócios.
-                                </div>
+    <section id="conect" class="bg-light text-muted py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="image/conect.png" alt="Connect" class="img-fluid mb-3 rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h3>Conect</h3>
+                    <p>
+                        Começe a <strong>agora</strong> a fazer parte da maior rede de investidores do Brasil.
+                    </p>
+
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
                         </div>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    Mais de 100K profissionais investidores disponiveis 24h por dia, 7 dias por semana para o negócio certo.
-                                </div>
+                        <div class="p-4 alig-senf-end">
+                            O mercado de investimento nunca foi tão fácil. Com a Node Investiment, você fará parte de uma grande rede de idéias de negócios, macetes de investimento e profissionais ligados 24h no mundo dos negócios.
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 alig-senf-end">
+                            Mais de 100K profissionais investidores disponiveis 24h por dia, 7 dias por semana para o negócio certo.
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-                <!-- create header -->
+    <!-- create header -->
 
-        <section id="invista" class="bg-primary">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="py-5">
-                            <h1 class="display-5">
-                                Invista
-                            </h1>
-                            <p class="lead">
-                                Me dê R$ <strong>10</strong>,00, que eu lhe dou R$ <strong>15</strong>,00! Perca o hoje mesmo o medo de investir em ações com alto potencial lucrativo.
-                            </p>
-                            <a class="btn btn-outline-light" href="#">Buscar um negócio</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-            <!-- create-section -->
-
-        <section id="atinga-resultados" class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Atinga resultados</h3>
-                        <p>
-                            Focando em metas e resultados em pouco tempo você será um investidor de sucesso. Não perca tempo e comece agora mesmo a focar nos seus resultados!
+    <section id="invista" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-5">
+                            Invista
+                        </h1>
+                        <p class="lead">
+                            Me dê R$ <strong>10</strong>,00, que eu lhe dou R$ <strong>15</strong>,00! Perca o hoje mesmo o medo de investir em ações com alto potencial lucrativo.
                         </p>
-
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    A plataform lhe fornece relatórios diários, semanais e mensais para você acompanhar seu progresso como investidor.
-                                </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    Compartilhe seus resultados com seus amigos, família e dentro da própria plataforma de maneira simples e satisfatória.
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="image/progresso.png" alt="Share" class="img-fluid mb-3 ml-5">
+                        <a class="btn btn-outline-light" href="#">Buscar um negócio</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-          <!-- share header -->
 
-        <section id="cresca" class="bg-primary">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="py-5">
-                            <h1 class="display-5">
-                                Cresça
-                            </h1>
-                            <p class="lead">
-                                A sorte acompanha a coragem. Ganha experiência, coragem e muito dinheiro!
-                            </p>
-                            <a class="btn btn-outline-light" href="#">Buscar um negócio</a>
+    <!-- create-section -->
+
+    <section id="atinga-resultados" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Atinga resultados</h3>
+                    <p>
+                        Focando em metas e resultados em pouco tempo você será um investidor de sucesso. Não perca tempo e comece agora mesmo a focar nos seus resultados!
+                    </p>
+
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 alig-senf-end">
+                            A plataform lhe fornece relatórios diários, semanais e mensais para você acompanhar seu progresso como investidor.
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 alig-senf-end">
+                            Compartilhe seus resultados com seus amigos, família e dentro da própria plataforma de maneira simples e satisfatória.
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <img src="image/progresso.png" alt="Share" class="img-fluid mb-3 ml-5">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- share header -->
 
-            <!-- share-section -->
-
-        <section id="compartilhe" class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Compartilhe</h3>
-                        <p>
-                            A cada nó a rede fica mais forte! E cada nó faz total diferencça no ecosistema!
+    <section id="cresca" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-5">
+                            Cresça
+                        </h1>
+                        <p class="lead">
+                            A sorte acompanha a coragem. Ganha experiência, coragem e muito dinheiro!
                         </p>
-
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    Compartilhe suas estratégias de negócios para que seus amigos venham entrar no mundo bussines e tornar a rede cada vez mais forte.
-                                </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div class="p-4 alig-senf-start">
-                                <i class="fa fa-check"></i>
-                            </div>
-                                <div class="p-4 alig-senf-end">
-                                    Ganhe bônus e gratificações a cada novo usuário que você convidar para fazer da Node Investiment e assim tornamos o mundo dos negócios cada vez mais acessível a todos.
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="image/shar.png" alt="Share" class="img-fluid w-75 ml-5 mb-3 rounded-circle">
+                        <a class="btn btn-outline-light" href="#">Buscar um negócio</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-- footer -->
-        <footer id="main-footer" class="bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="py-4">
-                            <h3>Node Investiment</h3>
-                            <p>Copyright &copy; 2018; <strong>All rigths reserveds.</strong></p>
-                            <p>made by <a href="#">thalisonwilker</a> with <i class="text-danger fa fa-heart"></i></p>
-                            <button data-target="#contactModal" data-toggle="modal" class="btn btn-primary">
+    <!-- share-section -->
+
+    <section id="compartilhe" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Compartilhe</h3>
+                    <p>
+                        A cada nó a rede fica mais forte! E cada nó faz total diferencça no ecosistema!
+                    </p>
+
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 alig-senf-end">
+                            Compartilhe suas estratégias de negócios para que seus amigos venham entrar no mundo bussines e tornar a rede cada vez mais forte.
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 alig-senf-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 alig-senf-end">
+                            Ganhe bônus e gratificações a cada novo usuário que você convidar para fazer da Node Investiment e assim tornamos o mundo dos negócios cada vez mais acessível a todos.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="image/shar.png" alt="Share" class="img-fluid w-75 ml-5 mb-3 rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer id="main-footer" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-4">
+                        <h3>Node Investiment</h3>
+                        <p>Copyright &copy; 2018; <strong>All rigths reserveds.</strong></p>
+                        <p>made by <a href="#">thalisonwilker</a> with <i class="text-danger fa fa-heart"></i></p>
+                        <button data-target="#contactModal" data-toggle="modal" class="btn btn-primary">
                                 Fale conosco
                             </button>
-                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-<!-- contact modal -->
-<div id="contactModal" class="modal fade show">
-    <div class="modal-dialog">
-        <div class="modal-content bg-dark">
-            <div class="modal-header">
-                <h5 class="modal-title">
-                    Fale conosco
-                </h5>
+        </div>
+    </footer>
+    <!-- contact modal -->
+    <div id="contactModal" class="modal fade show">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Fale conosco
+                    </h5>
 
-                <button class="close" data-dismiss="modal">&times;</button>
+                    <button class="close" data-dismiss="modal">&times;</button>
 
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <div class="form-group">
-                        <input placeholder="Your name" type="text" class="form-control mb-3">
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <input placeholder="Your name" type="text" class="form-control mb-3">
 
-                        <input placeholder="Your email" type="email" class="form-control mb-3">
+                            <input placeholder="Your email" type="email" class="form-control mb-3">
 
-                        <textarea placeholder="Your message here..." rows="2" class="form-control mb-3"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button data-dismiss="modal" class="btn btn-secondary">Close</button>
-                <button class="btn border border-light btn-dark">Send <i class="fa fa-send"></i></button>
+                            <textarea placeholder="Your message here..." rows="2" class="form-control mb-3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-secondary">Close</button>
+                    <button class="btn border border-light btn-dark">Send <i class="fa fa-send"></i></button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/wow.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
 
-        <script>
-            
-        </script>
-    </body>
+    <script>
+    </script>
+</body>
+
 </html>
